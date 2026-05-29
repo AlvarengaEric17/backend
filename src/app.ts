@@ -12,9 +12,10 @@ const app: Application = express();
 // Permitimos todas as origens para desenvolvimento. 
 // Em produção, substitua '*' pelo domínio do seu frontend.
 app.use(cors({
-  origin: '*',
+  origin: 'https://frontend-top-burguer-painel.vercel.app', // URL exata do seu front
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true // Necessário se você estiver usando cookies ou headers de sessão
 }));
 
 // 2. Parsers de corpo da requisição

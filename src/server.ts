@@ -12,6 +12,7 @@
 // src/server.ts
 import { app, config } from './app'; // Importando de ./app.ts
 
+
 const port = config.port;
 
 app.listen(port, () => {
