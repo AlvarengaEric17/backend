@@ -1,7 +1,8 @@
-// api/index.js
-// Importa o app que foi compilado na sua pasta 'dist' (ou 'build')
-const { app } = require('../dist/app'); 
+// api/index.ts
+import { Request, Response } from 'express';
+import { app } from '../dist/app'; // Ajuste o caminho conforme o seu build
 
-// Exporta o app como o padrão. O Express já é uma função (req, res) 
-// que a Vercel consegue executar perfeitamente.
-module.exports = app;
+// Aplicando os tipos Request e Response do Express
+export default (req: Request, res: Response) => {
+  return app(req, res);
+};
