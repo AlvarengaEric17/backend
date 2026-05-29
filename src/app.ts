@@ -41,5 +41,3 @@ app.use(errorHandler);
 
 export { app, config };
 
-// No final do seu src/app.js
-module.exports = { app, config };
