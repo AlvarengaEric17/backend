@@ -1,8 +1,7 @@
 // api/index.ts
 import { Request, Response } from 'express';
-import { app } from '../dist/app'; // Ajuste o caminho conforme o seu build
+import { app } from '../src/app'; // Importando do código fonte original
 
-// Aplicando os tipos Request e Response do Express
 export default (req: Request, res: Response) => {
   return app(req, res);
 };
