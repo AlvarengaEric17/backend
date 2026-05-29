@@ -1,6 +1,5 @@
 // api/index.ts
-import { app } from '../src/app'; 
+// IMPORTANTE: Importe o arquivo compilado que está na pasta 'dist'
+import { app } from '../dist/app'; 
 
-// A Vercel espera que a exportação padrão seja uma função (req, res) => void
-// O Express (app) já possui essa assinatura, então basta exportá-lo como default
 export default app;
