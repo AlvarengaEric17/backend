@@ -1,5 +1,5 @@
-// api/index.ts
-import { app } from '../src/app';
+// api/index.js
+const { app } = require('../src/app');
 
-// Isso exporta o app como o padrão, que é o que a Vercel precisa
-export default app;
+// Aqui exportamos o app para que a Vercel o use como handler
+module.exports = app;
